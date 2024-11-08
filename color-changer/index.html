@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>color change</title>
+	</head>
+	<body>
+		<span class="button" id="grey">grey</span>
+		<span class="button" id="green">green</span>
+		<span class="button" id="yellow">yellow</span>
+		<span class="button" id="orange">orange</span>
+	</body>
+	<script>
+		const buttons = document.querySelectorAll(".button");
+		console.log(buttons);
+		const body = document.querySelector("body");
+
+		buttons.forEach((button) => {
+			button.addEventListener("click", function (e) {
+				if (e.target.id === "grey") {
+					body.style.backgroundColor = e.target.id;
+				}
+				if (e.target.id === "yellow") {
+					body.style.backgroundColor = e.target.id;
+				}
+				if (e.target.id === "orange") {
+					body.style.backgroundColor = e.target.id;
+				}
+				if (e.target.id === "green") {
+					body.style.backgroundColor = e.target.id;
+				}
+			});
+		});
+	</script>
+</html>
