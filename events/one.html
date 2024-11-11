@@ -88,6 +88,40 @@
 		//     console.log("google clicked");
 		// }, false)
 
+		// document
+		// 	.querySelector("#images")
+		// 	.addEventListener("click", function (e) {
+		// 		console.log(e.target.tagName);
+		// 		if (e.target.tagName === "IMG") {
+		// 			console.log(e.target.id);
+		// 			let removeIt = e.target.parentNode;
+		// 			removeIt.remove();
+		// 		}
+		// 	});
+
+		//removeIt.parentNode.removeChild(removeIt)
+
+		// document
+		// 	.getElementById("images")
+		// 	.addEventListener("click", function (e) {
+		// 		console.log("clicked inside ul");
+		// 	});
+		// in bubbling case it goes from inside to outside, from child to parent
+		// in capturing case it goes from outside to inside, from parent to child
+
+		// document.getElementById("owl").addEventListener("click", function (e) {
+		// 	console.log("owl clicked");
+		// 	e.stopPropagation();
+		// });
+
+		// document
+		// 	.getElementById("google")
+		// 	.addEventListener("click", function (e) {
+		// 		e.preventDefault();
+		// 		console.log("google clicked");
+		// 		e.stopPropagation();
+		// 	});
+
 		document
 			.querySelector("#images")
 			.addEventListener("click", function (e) {
@@ -98,7 +132,5 @@
 					removeIt.remove();
 				}
 			});
-
-		//removeIt.parentNode.removeChild(removeIt)
 	</script>
 </html>
