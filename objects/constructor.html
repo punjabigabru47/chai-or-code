@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function user(username, loggedIn, loginCount) {
+				this.username = username;
+				this.loggedIn = loggedIn;
+				this.loginCount = loginCount;
+
+				//return this;
+			}
+
+			const userOne = new user("sunny", true, 33);
+			const userTwo = new user("love", false, 44);
+
+			// variable useTwo will overwrite the value of userOne if we dont use new keyword.
+
+			console.log(userOne);
+			console.log(userTwo);
+		</script>
+	</body>
+</html>
