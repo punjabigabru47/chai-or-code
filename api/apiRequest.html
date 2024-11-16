@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Promises</title>
+	</head>
+	<body>
+		<script>
+			const promiseOne = new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					console.log("async task has been completed");
+					resolve(); // resolve method is must to call for "promise consume"
+				}, 1000);
+			});
+			// promise has one function and two parameters called resolve and reject.
+
+			promiseOne.then(function () {
+				console.log("promised consumed");
+			});
+
+			//other way to do it...
+
+			new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					console.log("async task two done");
+					resolve();
+				}, 2000);
+			}).then(function () {
+				console.log("promise  two has consumed");
+			});
+
+			// third method.....
+
+			const promiseThree = new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					resolve({ user: "sunny", email: "sunny@gmail.com" });
+					// whatever we pass in resolve, we can access that data in .then.
+				}, 2000);
+			}).then(function (user) {
+				console.log(user);
+			});
+
+			//fourth method....
+
+			const promiseFour = new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					let error = true;
+					if (!error) {
+						resolve({
+							username: "sunny",
+							email: "sunny@gmail.com",
+						});
+					} else {
+						reject("ERROR: something went wrong");
+					}
+				});
+			});
+
+			promiseFour
+				.then((user) => {
+					console.log(user);
+					return user.username;
+				})
+				.then((username) => {
+					console.log(username);
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		</script>
+	</body>
+</html>
