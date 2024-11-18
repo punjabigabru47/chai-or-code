@@ -12,14 +12,19 @@
 				this.loggedIn = loggedIn;
 				this.loginCount = loginCount;
 
-				//return this;
+				this.greeting = function () {
+					console.log(`welcome: ${this.username}`);
+				};
+
+				return this; //
+				greeting();
 			}
 
 			const userOne = new user("sunny", true, 33);
 			const userTwo = new user("love", false, 44);
 
-			// variable useTwo will overwrite the value of userOne if we dont use new keyword.
-
+			// variable useTwo will overwrite the value of userOne if we do not use new keyword.
+			// when we use ker word, it creates new empty object, which is called instance.
 			console.log(userOne);
 			console.log(userTwo);
 		</script>
