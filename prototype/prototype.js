@@ -17,3 +17,7 @@ Object.prototype.sunny = function () {
 };
 
 myHeros.sunny();
+
+// this is the property we use to access the properties of others objects.
+// example below shows firstObject can access the properties of secondObj.
+Object.setPrototypeOf(firstObject, secondObj);
