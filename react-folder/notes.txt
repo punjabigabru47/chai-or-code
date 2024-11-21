@@ -1,0 +1,3 @@
+1. npm stands for node package manager. npx stands for node package executer directly
+    without installing.
+      npx create-react-app (name of the file) 
