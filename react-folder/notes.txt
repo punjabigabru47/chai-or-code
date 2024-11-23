@@ -1,3 +1,9 @@
 1. npm stands for node package manager. npx stands for node package executer directly
     without installing.
       npx create-react-app (name of the file) 
+
+2. in production build folder is served to users not a source folder.
+3. index.js is the entry point of react.
+4. react makes its own dom which called virtual dom. and compare with actual dom.
+5. in create react app, components should be created with js. but in vite it should be jsx
+6. we use react-dom in browser and react-native in mobile phones.
