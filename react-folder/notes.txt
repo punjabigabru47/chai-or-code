@@ -7,3 +7,6 @@
 4. react makes its own dom which called virtual dom. and compare with actual dom.
 5. in create react app, components should be created with js. but in vite it should be jsx
 6. we use react-dom in browser and react-native in mobile phones.
+7. create root create a dom like browser and compare with it and do changes as required.
+   and browser repaint entire webpage.
+8. reconciliation is algorithm which is called virtual dom comparison between two trees.
