@@ -1,8 +1,9 @@
-/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
 
-const Card = () => {
+const Card = ({ obj }) => {
+	console.log(obj);
 	return (
 		<>
 			<div className="flex font-sans">

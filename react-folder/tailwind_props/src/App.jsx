@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import "./App.css";
 import Card from "./components/Card";
 
